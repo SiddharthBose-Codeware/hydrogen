@@ -50,7 +50,7 @@ HydrogenComponent.prototype.refresh = function() {
 
   var lastElement = this.lastElement;
 
-  HydrogenModel.render(this, this.lastElement, false, true);
+  HydrogenModel.render(this, this.rootElement, false, true);
 
   this.remove(rootElement, lastElement);
 
