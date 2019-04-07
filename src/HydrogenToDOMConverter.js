@@ -62,7 +62,7 @@ HydrogenToDOMConverter = {
 
       for (var i = 0; i < textNodes.length; i++) {
 
-        if (typeof textNodes[i] === "string") {
+        if (typeof textNodes[i] !== "object") {
 
           textNode = document.createTextNode(textNodes[i]);
 
