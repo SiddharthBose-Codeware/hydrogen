@@ -50,39 +50,15 @@ class LazyComponentWrapperComponent extends HydrogenComponent {
 
 }
 
-class LoadingComponent extends HydrogenComponent {
-
-  constructor(location, loadingComponentRender) {
-
-    super();
-
-    this.location = location;
-
-    this.loadingComponentRender = loadingComponentRender;
-
-  }
-
-  render() {
-
-    return this.loadingComponentRender();
-
-  }
-
-}
-
 function LazyLoader() {
 
   this.lazyComponentsList = {};
-
-  this.loadingComponent = LoadingComponent;
 
   this.lazyComponentWrapperComponent = LazyComponentWrapperComponent;
 
 }
 
-LazyLoader.prototype.load = function(componentImport, loadingComponentRender, ...arguments) {
-
-  var loadingComponent = new this.loadingComponent(location, loadingComponentRender);
+LazyLoader.prototype.load = function(componentImport, loadingComponent, ...arguments) {
 
   var lazyComponentWrapperComponent = new (this.lazyComponentWrapperComponent)(loadingComponent, componentImport, !!componentImport, arguments);
 

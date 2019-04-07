@@ -1,6 +1,6 @@
 {
   "name": "@siddharthbosecodeware/hydrogen",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "A library to make Component based UIs.",
   "main": "src/Hydrogen.js",
   "author": "siddharthbosecodeware",

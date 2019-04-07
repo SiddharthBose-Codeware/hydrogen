@@ -113,7 +113,7 @@ HydrogenRouter.prototype.mount = function(path) {
 
     HydrogenModel.render(
 
-      new route.viewComponent(),
+      route.viewComponent,
 
       this.root || document.body,
 
