@@ -26,19 +26,21 @@ HydrogenComponent.prototype.remove = function(start, end) {
 
   var head = start || this.rootElement;
 
+  var back = end || this.lastElement;
+
   while (true) {
 
-    if (end ? head === end : head.nextElementSibling) {
+    var next = head.nextElementSibling;
 
-      head.remove();
+    head.remove();
 
-      head = head.nextElementSibling;
-
-    } else {
+    if (head === back) {
 
       break;
 
     }
+
+    head = next;
 
   }
 
