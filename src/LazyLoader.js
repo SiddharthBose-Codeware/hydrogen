@@ -64,7 +64,7 @@ class LoadingComponent extends HydrogenComponent {
 
   render() {
 
-    return [this.loadingComponentRender()];
+    return this.loadingComponentRender();
 
   }
 
